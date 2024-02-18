@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: iot
-  replicas: 1 # tells deployment to run 2 pods matching the template
+  replicas: 1 # tells deployment to run 1 pod matching the template
   template:
     metadata:
       labels:
@@ -17,6 +17,6 @@ spec:
       - name: iot
         image: aasthaoza/seneca-iot-tml-kafka-amd64
         ports:
-           - containerPort: 9005
-             hostPort: 9005
-      
+        - containerPort: 9005
+          hostPort: 9005
+
